@@ -1,0 +1,9 @@
+FROM continuumio/conda-ci-linux-64-python3.8
+EXPOSE 8888
+RUN sudo apt-get update
+RUN sudo apt-get install -yq bison build-essential curl flex git libbz2-dev ninja-build wget
+RUN sudo /opt/conda/bin/conda install jupyter -y --quiet
+RUN sudo /opt/conda/bin/conda install matplotlib -y --quiet
+RUN sudo /opt/conda/bin/conda install cmake -y --quiet
+RUN sudo /opt/conda/bin/conda update --all -y --quiet
+ENTRYPOINT /bin/bash
