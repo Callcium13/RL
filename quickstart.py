@@ -13,8 +13,6 @@ next_state = env.step(1)
 print("Next State", next_state)
 
 
-
-
 # How to get a minihack environment with also pixels states
 id = me.EMPTY_ROOM
 env = me.get_minihack_envirnment(id, add_pixel=True)
@@ -22,8 +20,6 @@ state = env.reset()
 print("Initial state", state)
 plt.imshow(state["pixel"])
 plt.show()
-
-
 
 
 # Crop representations to non-empty part
