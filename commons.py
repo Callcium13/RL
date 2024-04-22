@@ -39,8 +39,6 @@ class AbstractAgent():
         """
         pass
 
-
-
 class AbstractRLTask():
 
     def __init__(self, env, agent):
