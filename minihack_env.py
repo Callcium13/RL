@@ -52,7 +52,7 @@ ENDMAP
 class DoNotResetWhenDead(gym.Wrapper):
     """Modifies Reward by a constant"""
 
-    def __init__(self, env, max_episode_steps = 1000, goal_reward = 0, negative_step_reward = -1, dead_negative_reward = -100):
+    def __init__(self, env, max_episode_steps = 1000, goal_reward = 0, negative_step_reward = -1, dead_negative_reward = -1000):
         super().__init__(env)
         self.step_counter = 0
         self.max_episode_steps = max_episode_steps
